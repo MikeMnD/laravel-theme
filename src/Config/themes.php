@@ -5,8 +5,8 @@ return [
     /*
     |--------------------------------------------------------------------------
     | Root path where theme Views will be located.
-    | Can be outside default views path EG: resources/themes
-    | Leave it null if you will put your themes in the default views folder 
+    | Can be outside default views path e.g.: resources/themes
+    | Leave it null if you will put your themes in the default views folder
     | (as defined in config\views.php)
     |--------------------------------------------------------------------------
     */
@@ -15,7 +15,7 @@ return [
 
 	/*
 	|--------------------------------------------------------------------------
-	| Set behavior if an asset is not found in a Theme hierarcy.
+	| Set behavior if an asset is not found in a Theme hierarchy.
 	| Available options: THROW_EXCEPTION | LOG_ERROR | IGNORE
 	|--------------------------------------------------------------------------
 	*/
@@ -24,7 +24,7 @@ return [
 
 	/*
 	|--------------------------------------------------------------------------
-	| Do we want a theme activeted by default? Can be set at runtime with:
+	| Do we want a theme activated by default? Can be set at runtime with:
 	| Theme::set('theme-name');
 	|--------------------------------------------------------------------------
 	*/
@@ -34,11 +34,11 @@ return [
 	/*
 	|--------------------------------------------------------------------------
 	| Cache theme.json configuration files that are located in each theme's folder
-	| in order to avoid searching theme settings in the filesystem for  each request
+	| in order to avoid searching theme settings in the filesystem for each request
 	|--------------------------------------------------------------------------
 	*/
 
-	'cache' => true,
+	'cache' => false,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -51,7 +51,7 @@ return [
 	|
 	|		// You can add your own custom keys
 	|		// Use Theme::getSetting('key') & Theme::setSetting('key', 'value') to access them
-	| 		'key' 			=> 'value', 
+	| 		'key' 			=> 'value',
 	| 	],
 	|
 	|--------------------------------------------------------------------------
@@ -59,7 +59,7 @@ return [
 
 	'themes' => [
 
-		// Add your themes here. These settings will overide theme.json settings defined for each theme
+                // Add your themes here. These settings will override theme.json settings defined for each theme
 
 		/*
 		|---------------------------[ Example Structure ]--------------------------
@@ -71,26 +71,26 @@ return [
 		|		'views-path' 	=> example, // = resources/views/example_theme
 		|		'asset-path' 	=> example, // = public/example_theme
 		|	],
-		|	
+		|
 		|	// Use all Defaults:
-		|	
+		|
 		|	'example2',	// Assets =\public\example2, Views =\resources\views\example2
-		|				// Note that if you use all default values, you can ommit decledration completely.
+		|				// Note that if you use all default values, you can omit declaration completely.
 		|				// i.e. defaults will be used when you call Theme::set('undefined-theme')
-		|	
-		|	
+		|
+		|
 		|	// This theme shares the views with example2 but defines its own assets in \public\example3
-		|	
+		|
 		|	'example3' => [
 		|		'views-path'	=> 'example',
 		|	],
-		|	
-		|	// This theme extends example1 and may ovveride SOME views\assets in its own paths
-		|	
+		|
+		|	// This theme extends example1 and may override SOME views\assets in its own paths
+		|
 		|	'example4' => [
 		|		'extends'	=> 'example1',
 		|	],
-		|	
+		|
 		|--------------------------------------------------------------------------
 		*/
 	],
